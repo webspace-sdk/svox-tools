@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Command line tools for working with Smooth Voxels",
   "scripts": {
-    "build": "esbuild src/vox2svox.mjs --platform=node --bundle --outfile=dist/vox2svox.js",
+    "build": "esbuild src/vox2svox.mjs --platform=node --bundle --outfile=dist/vox2svox.js; esbuild src/svox2gltf.mjs --platform=node --bundle --outfile=dist/svox2gltf.js",
     "package": "pkg --out-path bin dist/vox2svox.js",
     "test": "exit 0"
   },
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "pkg": "^5.8.0",
-    "smoothvoxels": "^1.2.2",
+    "smoothvoxels": "^1.2.3",
     "three": "0.146.0",
     "yargs": "^17.6.0"
   }
