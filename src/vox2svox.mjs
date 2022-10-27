@@ -8,13 +8,14 @@ const argv = yargs(hideBin(process.argv))
     argv
       .option('mod', { alias: 'm', description: 'Additional model settings (eg \'shape cylinder-y, ao = 2 1\')', type: 'string' })
       .option('mat', { alias: 'k', description: 'Additional material settings (eg \'lighting = smooth, deform = 3, fade = true\')', type: 'string' })
+      .option('compression', { alias: 'c', description: 'Compression settings (auto|on|off)', type: 'string', default: 'auto' })
       .positional('input', { describe: 'Input MagicaVoxel format VOX file', type: 'string' })
       .positional('output', { describe: 'Output SVOX file (default stdout)', type: 'string', default: '-' })
   }).help().argv
 
 const voxData = fs.readFileSync(argv.input)
 const model = voxToSvox(voxData)
-const compressed = false
+const compressed = argv.compression === 'on' || (argv.compression === 'auto' && Math.max(model.size.x, model.size.y, model.size.z) >= 32)
 
 const modelSize = model.size.x === model.size.y && model.size.x === model.size.z ? `${model.size.x}` : `${model.size.x} ${model.size.y} ${model.size.z}`
 // get scale
