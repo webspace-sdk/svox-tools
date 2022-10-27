@@ -1,0 +1,35 @@
+{
+  "name": "svox-tools",
+  "version": "1.0.0",
+  "description": "Command line tools for working with Smooth Voxels",
+  "scripts": {
+    "build": "esbuild src/vox2svox.mjs --platform=node --bundle --outfile=dist/vox2svox.js",
+    "package": "pkg --out-path bin dist/vox2svox.js",
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jel-app/svox-tools.git"
+  },
+  "keywords": [],
+  "author": "Greg Fodor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jel-app/svox-tools/issues"
+  },
+  "homepage": "https://github.com/jel-app/svox-tools#readme",
+  "devDependencies": {
+    "esbuild": "^0.14.54",
+    "esbuild-plugin-inline-worker": "^0.1.1",
+    "prettier": "^2.7.1",
+    "prettier-standard": "^15.0.1",
+    "standard": "^17.0.0",
+    "tinyify": "^3.1.0"
+  },
+  "dependencies": {
+    "pkg": "^5.8.0",
+    "smoothvoxels": "^1.2.1",
+    "three": "0.146.0",
+    "yargs": "^17.6.0"
+  }
+}

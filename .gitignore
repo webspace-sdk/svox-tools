@@ -1,0 +1,11 @@
+.DS_Store
+dist
+node_modules/
+build/
+thumbs.db
+.idea/
+.env
+*.vox
+*.svox
+dist
+bin
