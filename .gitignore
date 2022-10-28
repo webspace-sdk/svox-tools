@@ -1,5 +1,6 @@
 .DS_Store
 dist
+build
 node_modules/
 build/
 thumbs.db
@@ -7,5 +8,3 @@ thumbs.db
 .env
 *.vox
 *.svox
-dist
-bin
