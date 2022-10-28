@@ -1,6 +1,8 @@
 # svox-tools
 Command line tools for converting to/from [Smooth Voxels](https://github.com/jel-app/smoothvoxels) files.
 
+You can [download binaries](https://github.com/jel-app/svox-tools/releases) from releases.
+
 Included in this repo are two tools:
 
 - `vox2svox` - Convert a MagicaVoxel VOX file to an SVOX file
