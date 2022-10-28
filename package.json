@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Command line tools for working with Smooth Voxels",
   "scripts": {
-    "build": "esbuild src/vox2svox.mjs --platform=node --bundle --outfile=build/vox2svox.js; esbuild src/svox2gltf.mjs --platform=node --bundle --outfile=build/svox2gltf.js",
-    "package": "rm -rf dist/* ; pkg -t linux -o dist/svox-tools-${npm_package_version}-linux/vox2svox build/vox2svox.js ; pkg -t linux -o dist/svox-tools-${npm_package_version}-linux/svox2gltf build/svox2gltf.js ; pkg -t macos -o dist/svox-tools-${npm_package_version}-macos/vox2svox build/vox2svox.js ; pkg -t macos -o dist/svox-tools-${npm_package_version}-macos/svox2gltf build/svox2gltf.js ; pkg -t win -o dist/svox-tools-${npm_package_version}-win/vox2svox build/vox2svox.js ; pkg -t win -o dist/svox-tools-${npm_package_version}-win/svox2gltf build/svox2gltf.js ; cd dist ; tar cfz svox-tools-${npm_package_version}-linux.tar.gz svox-tools-${npm_package_version}-linux ; tar cfz svox-tools-${npm_package_version}-macos.tar.gz svox-tools-${npm_package_version}-macos ; tar cfz svox-tools-${npm_package_version}-win.tar.gz svox-tools-${npm_package_version}-win ",
+    "build": "esbuild src/vox2svox.mjs --platform=node --bundle --outfile=build/vox2svox; esbuild src/svox2gltf.mjs --platform=node --bundle --outfile=build/svox2gltf",
+    "package": "rm -rf dist/* ; pkg -t linux -o dist/svox-tools-${npm_package_version}-linux/vox2svox build/vox2svox ; pkg -t linux -o dist/svox-tools-${npm_package_version}-linux/svox2gltf build/svox2gltf ; pkg -t macos -o dist/svox-tools-${npm_package_version}-macos/vox2svox build/vox2svox ; pkg -t macos -o dist/svox-tools-${npm_package_version}-macos/svox2gltf build/svox2gltf ; pkg -t win -o dist/svox-tools-${npm_package_version}-win/vox2svox build/vox2svox ; pkg -t win -o dist/svox-tools-${npm_package_version}-win/svox2gltf build/svox2gltf ; cd dist ; tar cfz svox-tools-${npm_package_version}-linux.tar.gz svox-tools-${npm_package_version}-linux ; tar cfz svox-tools-${npm_package_version}-macos.tar.gz svox-tools-${npm_package_version}-macos ; tar cfz svox-tools-${npm_package_version}-win.tar.gz svox-tools-${npm_package_version}-win ",
     "test": "exit 0"
   },
   "repository": {
@@ -29,7 +29,7 @@
   "dependencies": {
     "filereader": "github:jel-app/FileReader#node-blob-compat",
     "pkg": "^5.8.0",
-    "smoothvoxels": "^1.2.3",
+    "smoothvoxels": "^1.2.4",
     "three": "github:jel-app/three.js#svox-tools/master",
     "yargs": "^17.6.0"
   }
