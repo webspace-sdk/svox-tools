@@ -8,10 +8,10 @@ const argv = yargs(hideBin(process.argv))
     argv
       .option('mod', { alias: 'm', description: 'Additional model settings (eg \'shape cylinder-y, ao = 2 1\')', type: 'string' })
       .option('mat', { alias: 'k', description: 'Additional material settings (eg \'lighting = smooth, deform = 3, fade = true\')', type: 'string' })
-      .option('compression', { alias: 'c', description: 'Compression settings (auto|on|off)', type: 'string', default: 'auto' })
+      .option('compression', { alias: 'c', description: 'Compression settings', type: 'string', default: 'auto', choices: ['auto', 'on', 'off'] })
       .positional('input', { describe: 'Input MagicaVoxel format VOX file', type: 'string' })
-      .positional('output', { describe: 'Output SVOX file (default stdout)', type: 'string', default: '-' })
-  }).help().argv
+      .positional('output', { describe: 'Output SVOX file', type: 'string', default: '-' })
+  }).wrap(Math.min(120, yargs().terminalWidth())).help().argv
 
 const voxData = fs.readFileSync(argv.input)
 const model = voxToSvox(voxData)
