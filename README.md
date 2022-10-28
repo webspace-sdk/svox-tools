@@ -1,5 +1,5 @@
 # svox-tools
-Command line tools for Smooth Voxels
+Command line tools for converting to/from [Smooth Voxels](https://github.com/jel-app/smoothvoxels) files.
 
 Included in this repo are two tools:
 
@@ -29,7 +29,7 @@ Options:
 ```
 
 ```
-svox2gltf.js <input> [output]
+svox2gltf <input> [output]
 
 Convert SVOX file to GLTF file
 
