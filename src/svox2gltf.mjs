@@ -17,7 +17,7 @@ const argv = yargs(hideBin(process.argv))
     argv
       .option('binary', { alias: 'b', description: 'Save binary (.glb) GLTF file', type: 'boolean', default: false })
       .positional('input', { describe: 'Input MagicaVoxel format VOX file', type: 'string' })
-      .positional('output', { describe: 'Output SVOX file (default stdout)', type: 'string', default: '-' })
+      .positional('output', { describe: 'Output SVOX file', type: 'string', default: '-' })
   }).help().argv
 
 const svoxData = fs.readFileSync(argv.input)
