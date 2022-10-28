@@ -12,7 +12,6 @@ Usage:
 
 ```
 vox2svox <input> [output]
-vox2svox <input> [output]
 
 Convert MagicaVoxel format VOX file to SVOX file
 
