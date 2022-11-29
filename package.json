@@ -1,6 +1,6 @@
 {
   "name": "svox-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Command line tools for working with Smooth Voxels",
   "scripts": {
     "build": "esbuild src/vox2svox.mjs --platform=node --bundle --outfile=build/vox2svox; esbuild src/svox2gltf.mjs --platform=node --bundle --outfile=build/svox2gltf",
