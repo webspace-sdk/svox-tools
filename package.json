@@ -29,7 +29,7 @@
   "dependencies": {
     "filereader": "github:jel-app/FileReader#node-blob-compat",
     "pkg": "^5.8.0",
-    "smoothvoxels": "^1.2.5",
+    "smoothvoxels": "^1.2.6",
     "three": "github:jel-app/three.js#svox-tools/master",
     "yargs": "^17.6.0"
   }
